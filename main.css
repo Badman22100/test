@@ -1,0 +1,99 @@
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+
+.image-gallery {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.gallery-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-dot.active {
+    background-color: white;
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Navigation Menu Transitions */
+.navigation-menu {
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-overlay {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Notification Animations */
+.slide-in-top {
+    animation: slideInTop 0.5s ease-out forwards;
+}
+
+.slide-in-bottom {
+    animation: slideInBottom 0.5s ease-out forwards;
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
